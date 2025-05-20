@@ -1,17 +1,17 @@
-import { Button } from "./components/ui/button"
-import { useTheme } from "./context/theme-context"
+import type { ReactNode } from "react"
+import { Navbar } from "./components/navbar"
 
-export function App() {
-  const { setTheme, } = useTheme()
+export function App({ children }: { children: ReactNode }) {
   return (
-    <div className="bg-blue-200 text-black dark:bg-blue-950 dark:text-blue-400 h-screen">
-      <p>Hello tailwind</p>
+    <div className="bg-blue-200 text-black dark:bg-gray-900 dark:text-gray-100 h-screen">
+      <Navbar />
+      <section className="flex w-full items-center justify-center overflow-auto">
+        <div className=" max-w-7xl w-full mx-5 h-[calc(100vh-60px)]">
+          {children}
+        </div>
+      </section>
 
-      <div className="flex gap-4 text-dark dark:text-white">
-        <Button className="hover:cursor-pointer" onClick={() => setTheme('light')}>Light</Button>
-        <Button className="hover:cursor-pointer" onClick={() => setTheme('dark')}>Dark</Button>
-        <Button className="hover:cursor-pointer" onClick={() => setTheme('system')}>System</Button>
-      </div>
+
     </div>
   )
 }
