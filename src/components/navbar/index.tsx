@@ -22,6 +22,8 @@ export function Navbar() {
 
               <span></span>
               <Button
+                size={"icon"}
+                variant={"outline"}
                 disabled={'light' === theme}
                 className="hover:cursor-pointer"
                 onClick={() => setTheme('light')}>
@@ -29,6 +31,8 @@ export function Navbar() {
               </Button>
 
               <Button
+                size={"icon"}
+                variant={"outline"}
                 disabled={'dark' === theme}
                 className="hover:cursor-pointer"
                 onClick={() => setTheme('dark')}>
@@ -36,6 +40,8 @@ export function Navbar() {
               </Button>
 
               <Button
+                size={"icon"}
+                variant={"outline"}
                 disabled={'system' === theme}
                 className="hover:cursor-pointer"
                 onClick={() => setTheme('system')}>
