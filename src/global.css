@@ -3,6 +3,21 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* width */
+::-webkit-scrollbar {
+  @apply size-1
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-[#4d4d4d] dark:bg-[#1E261E] rounded-full
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-[#202020] dark:bg-[#363E35] rounded-full
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
