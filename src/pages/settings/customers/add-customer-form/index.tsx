@@ -49,8 +49,8 @@ export function AddCustomerForm() {
       {/* </DialogTrigger> */}
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Order form</DialogTitle>
-          <DialogDescription>Fill in the fields below to create a new order.</DialogDescription>
+          <DialogTitle>Customer form</DialogTitle>
+          <DialogDescription>Fill in the fields below to add a new customer.</DialogDescription>
         </DialogHeader>
 
         <form onSubmit={handleSubmit(data => mutate({ ...data, age: new Date(data.age) }))} className="flex flex-col gap-2">
