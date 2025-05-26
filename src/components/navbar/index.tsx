@@ -8,10 +8,8 @@ export function Navbar() {
 
   const currentTheme = theme === 'dark' ? 'light' : 'dark'
 
-  console.log(currentTheme)
-
   return (
-    <nav className="flex w-full h-15 items-center justify-center border-b-2 border-gray-700">
+    <nav className="flex w-full h-15 items-center justify-center border-b-1 border-gray-900">
       <div className="flex items-center max-w-7xl w-full mx-5">
         <h1 className="font-bold mr-4">Thayna Vieira</h1>
         <NavLink to={'/'}>
