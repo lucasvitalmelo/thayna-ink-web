@@ -51,10 +51,6 @@ export function OrderFormDialog() {
     }
   })
 
-
-  console.log(errors)
-  // const onSubmit = data => console.log(data)
-
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
