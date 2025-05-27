@@ -72,15 +72,20 @@ export function Tags({ tags, orderId }: TagsProps) {
             )
           })}
         </div>
+
       ) : (
-        <div className="flex gap-2 flex-wrap">
-          {tags.map(tag => (
-            <Badge key={tag} variant="outline">
-              <Tag size={14} className="mr-1" />
-              {tag}
-            </Badge>
-          ))}
-        </div>
+
+        tags.length ?
+          <div className="flex gap-2 flex-wrap">
+            {tags.map(tag => (
+              <Badge key={tag} variant="outline">
+                <Tag size={14} className="mr-1" />
+                {tag}
+              </Badge>
+            ))}
+          </div>
+          :
+          <span>---</span>
       )}
     </div>
   )
