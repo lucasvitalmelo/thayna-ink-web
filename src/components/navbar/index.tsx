@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { Button } from "../ui/button";
 import { useTheme } from "@/context/theme-context";
 import { Moon, Settings, Sun } from "lucide-react";
+import { Logo } from "../logo";
 
 export function Navbar() {
   const { setTheme, theme } = useTheme()
@@ -11,7 +12,10 @@ export function Navbar() {
   return (
     <nav className="flex w-full h-15 items-center justify-center border-b-1 border-gray-900">
       <div className="flex items-center max-w-7xl w-full mx-5">
-        <h1 className="font-bold mr-4">Thayna Vieira</h1>
+        <h1 className="flex items-center gap-2 font-bold mr-4">
+          <Logo size={35} />
+          Thayna Manager
+        </h1>
         <NavLink to={'/'}>
           <Button
             size={"sm"}
