@@ -62,8 +62,6 @@ export function AddCustomerForm() {
               placeholder="Name"
             />
             <Input
-              className="dark:[color-scheme:dark]"
-
               type="date"
               {...register("age")}
               placeholder="Date of birth"
