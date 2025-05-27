@@ -1,4 +1,5 @@
 export type Order = {
+  id: number
   customer: string
   scheduleDate: Date | null
   tattooType: string
