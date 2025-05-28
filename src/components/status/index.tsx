@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import type { ComponentProps } from "react"
 
 const statusVariants = cva(
-  "py-0.5 rounded-full px-4 border border-yellow-500 text-yellow-500",
+  "block py-0.5 w-28 rounded-sm text-center text-sm px-4 border border-yellow-500 text-yellow-500",
   {
     variants: {
       variant: {
@@ -14,28 +14,27 @@ const statusVariants = cva(
         CONCLUDED:
           "border-green-500 text-green-500",
       },
-
     },
   }
 )
 
 const statusValues = {
-  "PENDING": "Pendente",
-  "PROGRESS": "Progresso",
-  "CONCLUDED": "Concluído"
+  "PENDING": "Pending",
+  "PROGRESS": "Progress",
+  "CONCLUDED": "Concluded"
 }
 
 type StatusProps = ComponentProps<"span">
   & VariantProps<typeof statusVariants>
   & { value: "PROGRESS" | "PENDING" | "CONCLUDED" }
 
-export function Status({ value, ...props }: StatusProps) {
+export function Status({ value, className, ...props }: StatusProps) {
 
   const variant = value
 
   return (
     <span
-      className={cn(statusVariants({ variant }))}
+      className={cn(statusVariants({ variant, className }))}
       {...props}
     >
       {statusValues[value!]}
