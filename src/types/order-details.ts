@@ -15,4 +15,5 @@ export type OrderDatails = {
   description: string | null
   width: number
   height: number
+  status: "PENDING" | "PROGRESS" | "CONCLUDED"
 }
