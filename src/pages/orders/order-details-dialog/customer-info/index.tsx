@@ -12,7 +12,7 @@ type CustomerInfoProps = {
 
 export function CustomerInfo({ customer }: CustomerInfoProps) {
   return (
-    <>
+    <div className="flex flex-col gap-1.5">
       <TypographyMuted text="Customer information" />
       <span className="flex gap-2 items-center">
         Name: {customer.name}
@@ -27,6 +27,6 @@ export function CustomerInfo({ customer }: CustomerInfoProps) {
         <Mail size={18} />
         {customer.email}
       </span>
-    </>
+    </div>
   )
 }
