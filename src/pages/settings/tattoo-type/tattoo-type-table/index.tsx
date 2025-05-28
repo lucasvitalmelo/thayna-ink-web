@@ -18,7 +18,7 @@ export function TattooTypeTable() {
   const { mutate } = useDeleteTattooType()
 
   return (
-    <Table className="w-[500px] mx-auto mt-4">
+    <Table className="lg:w-[500px] mx-auto mt-4">
       <TableCaption>A list of your available tattoo types.</TableCaption>
       <TableHeader>
         <TableRow className="">

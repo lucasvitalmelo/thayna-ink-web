@@ -48,7 +48,7 @@ export function ScheduleForm({ date, orderId }: ScheduleInfoProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="flex max-w-fit items-center gap-2">
+    <form onSubmit={handleSubmit(onSubmit)} className="flex max-w-fit items-center gap-2 mb-3">
       <CalendarCheck2 size={28} />
       <Input
         type="datetime-local"

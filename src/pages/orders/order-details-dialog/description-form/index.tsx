@@ -33,7 +33,6 @@ export function DescriptionForm({
     defaultValues: { description: description ?? "" },
   })
 
-  // Atualiza o formulário se a descrição mudar
   useEffect(() => {
     reset({ description: description ?? "" })
   }, [description, reset])
@@ -43,7 +42,7 @@ export function DescriptionForm({
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} className="mb-3">
       <TypographyMuted text="Description" />
 
       <div className="flex gap-2 mt-2">

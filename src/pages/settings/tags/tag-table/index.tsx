@@ -18,7 +18,7 @@ export function TagTable() {
   const { mutate } = useDeleteTag()
 
   return (
-    <Table className="w-[500px] mx-auto mt-4">
+    <Table className="lg:w-[500px] mx-auto mt-4">
       <TableCaption>A list of your available tags.</TableCaption>
       <TableHeader>
         <TableRow className="">

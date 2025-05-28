@@ -14,7 +14,7 @@ export function Navbar() {
       <div className="flex items-center max-w-7xl w-full mx-5">
         <h1 className="flex items-center gap-2 font-bold mr-4">
           <Logo size={35} />
-          Thayna Manager
+          <span className="hidden lg:flex md:flex">Thayna Manager</span>
         </h1>
         <NavLink to={'/'}>
           <Button

@@ -38,16 +38,16 @@ export function Tags({ tags, orderId }: TagsProps) {
   }
 
   return (
-    <div>
+    <div className="mb-3">
       <div className="flex items-center justify-between mb-2">
         <TypographyMuted text="Tags" />
         {isEdit ? (
           <Button size="xs" onClick={handleEditTags}>
-            <Save className="w-4 h-4 mr-1" /> Save
+            <Save className="w-4 h-4 mr-1" />
           </Button>
         ) : (
           <Button size="xs" variant="outline" onClick={() => setIsEdit(true)}>
-            <Pencil className="w-4 h-4 mr-1" /> Edit
+            <Pencil className="w-4 h-4 mr-1" />
           </Button>
         )}
       </div>

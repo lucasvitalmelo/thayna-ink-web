@@ -29,7 +29,7 @@ export function OrderDetailsDialog({ orderId, isOpen, setIsOpen }: OrderDetailsP
           <DialogTitle>Order details</DialogTitle>
           <DialogDescription>View, edit, and add information related to an order.</DialogDescription>
         </DialogHeader>
-        <div className="overflow-auto h-[calc(100vh-460px)] pr-6">
+        <div className="overflow-auto h-[calc(100vh-410px)] pr-6">
 
 
           {isLoading ? (

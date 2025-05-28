@@ -9,7 +9,7 @@ type TattooDetailsProps = {
 
 export function TattooDetails({ location, width, height }: TattooDetailsProps) {
   return (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1 mb-3">
       <TypographyMuted text="Tattoo details" />
       <span className="flex gap-2 items-center">
         <BicepsFlexed size={18} />
