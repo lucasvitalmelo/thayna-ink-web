@@ -1,4 +1,4 @@
-import { GoogleIcon } from "@/components/google-logo";
+import { GoogleIcon } from "@/components/google-icon";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 
