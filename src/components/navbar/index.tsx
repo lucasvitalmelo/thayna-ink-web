@@ -1,11 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { Button } from "../ui/button";
 import { useTheme } from "@/context/theme-context";
-import { Moon, Settings, Sun } from "lucide-react";
+import { LogOut, Moon, Settings, Sun } from "lucide-react";
 import { Logo } from "../logo";
+import { useLogOut } from "@/hooks/useLogOut";
 
 export function Navbar() {
   const { setTheme, theme } = useTheme()
+  const { mutate: logout } = useLogOut()
 
   const currentTheme = theme === 'dark' ? 'light' : 'dark'
 
@@ -41,8 +43,14 @@ export function Navbar() {
           >
             {currentTheme === 'dark' ? <Moon /> : <Sun />}
           </Button>
+          <Button
+            onClick={() => logout()}
+            variant={"destructive"}
+            size={"icon"}
+          >
+            <LogOut />
+          </Button>
         </div>
-        {/* <Menu /> */}
       </div>
     </nav>)
 }
