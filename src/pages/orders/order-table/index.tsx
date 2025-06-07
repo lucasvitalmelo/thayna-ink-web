@@ -15,12 +15,17 @@ import { Status } from "@/components/status"
 import { OrderDetailsDialog } from "../order-details-dialog"
 import { formatDateTime } from "@/utils/formatDate"
 import { Badge } from "@/components/ui/badge"
+import { useOpenWhatsApp } from "@/hooks/use-open-whatsapp"
+import { Button } from "@/components/ui/button"
+import { WhatsAppIcon } from "@/components/whatsapp-icon"
 
 export function OrderTable() {
   const { data: orders, isLoading } = useGetAllOrders()
 
   const [selectedOrderId, setSelectedOrderId] = useState<number | null>(null)
   const [isOpenOrderDetails, setIsOpenOrderDetails] = useState(false)
+
+  const { openChat } = useOpenWhatsApp()
 
   return (
     <>
@@ -53,7 +58,6 @@ export function OrderTable() {
 
           {
             orders?.map(order => {
-
               const schedule = order.scheduledDate ? formatDateTime(order.scheduledDate) : '---'
 
               return (
@@ -79,8 +83,12 @@ export function OrderTable() {
                     </Badge>
                   </TableCell>
 
-                  <TableCell className="flex-1 hidden lg:block">
+                  <TableCell className="flex-1 hidden lg:flex lg: items-center lg:gap-2">
+
                     {order.phone}
+                    <Button variant={"ghost"} size={"icon"} onClick={() => (openChat({ phone: order.phone }))}>
+                      <WhatsAppIcon />
+                    </Button>
                   </TableCell>
 
                   <TableCell className="flex-1 hidden lg:block">
@@ -88,6 +96,7 @@ export function OrderTable() {
                   </TableCell>
 
                   <TableCell className="flex-1 ">
+
                     <div className="flex  gap-2 flex-col">
                       <span title="Total" className="flex gap-2">
                         <Banknote size={19} />
@@ -104,7 +113,7 @@ export function OrderTable() {
             })
           }
 
-        </TableBody>
+        </TableBody >
         {
           selectedOrderId && (
             <OrderDetailsDialog
@@ -114,7 +123,7 @@ export function OrderTable() {
             />
           )
         }
-      </Table>
+      </Table >
     </>
   )
 }
