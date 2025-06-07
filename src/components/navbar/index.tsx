@@ -27,6 +27,13 @@ export function Navbar() {
         </NavLink>
         <div className="ml-auto flex items-center gap-2">
 
+          <Button
+            variant={"ghost"}
+            size={"icon"}
+            onClick={() => setTheme(currentTheme)}
+          >
+            {currentTheme === 'dark' ? <Moon /> : <Sun />}
+          </Button>
           <NavLink to='/settings' >
             <Button
               variant={"outline"}
@@ -36,13 +43,6 @@ export function Navbar() {
               settings
             </Button>
           </NavLink>
-          <Button
-            variant={"ghost"}
-            size={"icon"}
-            onClick={() => setTheme(currentTheme)}
-          >
-            {currentTheme === 'dark' ? <Moon /> : <Sun />}
-          </Button>
           <Button
             onClick={() => logout()}
             variant={"destructive"}
