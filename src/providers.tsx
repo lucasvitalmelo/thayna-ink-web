@@ -4,6 +4,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
 
 import { BrowserRouter } from "react-router-dom"
 import { Router } from "./router"
+import { Toaster } from "./components/ui/sonner"
 
 export function Provivers() {
   const queryClient = new QueryClient()
@@ -12,6 +13,7 @@ export function Provivers() {
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
           <Router />
+          <Toaster />
         </BrowserRouter>
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
