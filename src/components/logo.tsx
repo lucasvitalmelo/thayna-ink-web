@@ -1,7 +1,7 @@
 import { useTheme } from "@/context/theme-context"
 
 type LogoProps = {
-  size?: number // tamanho opcional em pixels
+  size?: number
 }
 
 export function Logo({ size = 30 }: LogoProps) {

@@ -166,7 +166,6 @@ export function OrderFormDialog() {
           <Controller
             name="price"
             control={control}
-            // defaultValue={0}
             render={({ field }) => (
               <CurrencyInput
                 value={field.value}
@@ -212,12 +211,6 @@ export function OrderFormDialog() {
             Save
           </Button>
         </form>
-
-
-
-
-
-
 
       </DialogContent>
 
